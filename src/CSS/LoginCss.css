@@ -1,0 +1,111 @@
+.login{
+    display: flex;
+    align-items: center;
+    margin-top: -70px;
+    
+}
+.headingL {
+    font-size: clamp(1rem, 2.5vw + 1rem, 3rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+    display: inline-flex;
+   
+  }
+  
+  .headingL::before,
+  .headingL::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .headingL::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .headingL::after {
+    width: 0.06em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards
+  }
+  .subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: clamp(0.5rem, 2vw + 0.5rem, 2.5rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+  }
+  
+ 
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.login_img{
+    height: 40vh;
+    width: 40vw;
+}
+.login_card{
+    height: 50vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.btn_login{
+    background-color: #5b52fc;
+
+  }
+  .btn_login:hover{
+    background-color: #4400ff;
+  }
+  @media (max-width: 768px){
+  .login_img{
+      display: none;
+  }
+  .headingL{
+    margin: 0px auto;
+    width: max-content;
+      font-size: 2rem;
+  }
+  .svgup{
+      visibility: hidden;
+  }
+  .login_card{
+      margin-left: 100px;
+  }
+  }
+  @media (max-width: 560px){
+    .headingL{
+        margin: 0px auto;
+        width: max-content;
+        font-size: 1.5rem;
+    }
+  .login_card{
+      margin: 0px auto;
+  }
+  }
+ 

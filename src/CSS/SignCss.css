@@ -1,0 +1,112 @@
+.Signin{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+
+}
+.headingS {
+    font-size: clamp(1rem, 2.5vw + 1rem, 3rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+    display: inline-flex;
+   
+  }
+  
+  .headingS::before,
+  .headingS::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .headingS::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .headingS::after {
+    width: 0.06em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards
+  }
+  .subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: clamp(0.5rem, 2vw + 0.5rem, 2.5rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+  }
+  
+ 
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.signin_img{
+    height: 40vh;
+    width: 40vw;
+    /* border: 1px solid blue; */
+}
+.sign_card{
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.btn_sign{
+    background-color: #5b52fc;
+  }
+  .btn_sign:hover{
+    background-color: #4400ff;
+  }
+  @media (max-width: 768px){
+    .signin_img{
+        display: none;
+    }
+    .headingS{
+        margin: 0px auto;
+        width: max-content;
+        font-size: 2rem;
+    }
+    .svgdn{
+        visibility: hidden;
+    }
+    .sign_card{
+        margin-left: 100px;
+    }
+    }
+    @media (max-width: 560px){
+      .headingS{
+        margin: 0px auto;
+        width: max-content;
+          font-size: 1.5rem;
+      }
+    .sign_card{
+        margin: 0px auto;
+    }
+    }
